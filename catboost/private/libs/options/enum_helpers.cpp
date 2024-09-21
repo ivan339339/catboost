@@ -540,6 +540,7 @@ static const TVector<ELossFunction> RegressionObjectives = {
     ELossFunction::LogLinQuantile,
     ELossFunction::Expectile,
     ELossFunction::MAPE,
+    ELossFunction::RMSPE,
     ELossFunction::Poisson,
     ELossFunction::Lq,
     ELossFunction::Huber,

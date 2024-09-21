@@ -1500,7 +1500,7 @@ TMetricHolder TRMSPEMetric::EvalSingleThread(
 }
 
 double TRMSPEMetric::GetFinalError(const TMetricHolder& error) const {
-    return 100 * sqrt(error.Stats[0] / (error.Stats[1] + 1e-38));
+    return sqrt(error.Stats[0] / (error.Stats[1] + 1e-38));
 }
 
 void TRMSPEMetric::GetBestValue(EMetricBestValue* valueType, float* bestValue) const {

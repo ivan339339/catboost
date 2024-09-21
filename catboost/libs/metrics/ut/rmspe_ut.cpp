@@ -16,7 +16,7 @@ Y_UNIT_TEST(RMSPETest) {
         const auto metric = std::move(CreateSingleTargetMetric(ELossFunction::RMSPE, TLossParams(), /*approxDimension=*/1)[0]);
         TMetricHolder score = metric->Eval(approx, target, {}, {}, 0, target.size(), executor);
 
-        UNIT_ASSERT_DOUBLES_EQUAL(metric->GetFinalError(score), 22.104f, 1e-3);
+        UNIT_ASSERT_DOUBLES_EQUAL(metric->GetFinalError(score), 0.221f, 1e-3);
     }
     {
         TVector<TVector<double>> approx{{-34.1f, -30.1f, -36.5f, -17.7f, 26.8f, 11.1f, 19.8f, 18.1f, -15.4f, -32.6f}};
@@ -37,7 +37,7 @@ Y_UNIT_TEST(RMSPETest) {
         const auto metric = std::move(CreateSingleTargetMetric(ELossFunction::RMSPE, TLossParams(), /*approxDimension=*/1)[0]);
         TMetricHolder score = metric->Eval(approx, target, {}, {}, 0, target.size(), executor);
 
-        UNIT_ASSERT_DOUBLES_EQUAL(metric->GetFinalError(score), 33.87, 1e-2);
+        UNIT_ASSERT_DOUBLES_EQUAL(metric->GetFinalError(score), 0.3387, 1e-2);
     }
 }
 }
