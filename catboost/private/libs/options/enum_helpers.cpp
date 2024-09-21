@@ -206,6 +206,9 @@ MakeRegister(LossInfos,
     Registree(SMAPE,
         EMetricAttribute::IsRegression
     ),
+    Registree(RMSPE,
+        EMetricAttribute::IsRegression
+    ),
     Registree(Huber,
         EMetricAttribute::IsRegression
         | EMetricAttribute::HasGpuImplementation
